@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xak-uW-wep">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Converter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter number in decimal number system" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Du6-qe-z65">
@@ -87,6 +89,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Converter" image="plus.app.fill" catalog="system" id="cSn-mU-JWj"/>
                     <connections>
                         <outlet property="ss16" destination="eoo-Nq-liY" id="rRL-6r-KMX"/>
                         <outlet property="ss2" destination="8S0-Ng-hpx" id="YYV-SM-TR5"/>
@@ -96,10 +99,139 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+            <point key="canvasLocation" x="939.13043478260875" y="88.392857142857139"/>
+        </scene>
+        <!--Table-->
+        <scene sceneID="o9C-ho-cZk">
+            <objects>
+                <viewController id="dDg-bT-yYG" customClass="TablebView" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sxc-j5-CGd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fBA-oV-Y5M">
+                                <rect key="frame" x="20" y="115" width="374" height="583"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifyer" textLabel="pjD-2g-3pV" style="IBUITableViewCellStyleDefault" id="ZiM-oG-jIC">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZiM-oG-jIC" id="oe1-4s-9WK">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pjD-2g-3pV">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dDg-bT-yYG" id="AdU-rj-za5"/>
+                                    <outlet property="delegate" destination="dDg-bT-yYG" id="Gmx-8H-W8C"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o5K-g5-b91"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fBA-oV-Y5M" firstAttribute="centerY" secondItem="sxc-j5-CGd" secondAttribute="centerY" id="JP0-eU-fKa"/>
+                            <constraint firstItem="fBA-oV-Y5M" firstAttribute="centerX" secondItem="sxc-j5-CGd" secondAttribute="centerX" id="QYn-aN-bTO"/>
+                            <constraint firstItem="fBA-oV-Y5M" firstAttribute="leading" secondItem="sxc-j5-CGd" secondAttribute="leadingMargin" id="VNT-xY-3BA"/>
+                            <constraint firstItem="fBA-oV-Y5M" firstAttribute="top" secondItem="o5K-g5-b91" secondAttribute="top" constant="71" id="yG0-D0-o81"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Table" image="square.grid.2x2" catalog="system" id="6Pg-eC-nol">
+                        <imageReference key="selectedImage" image="square.grid.2x2.fill" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="fBA-oV-Y5M" id="lfq-iJ-wqv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Do-I6-HdT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="833.70535714285711"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="ZUN-bG-e4H">
+            <objects>
+                <viewController id="P28-vS-wKd" customClass="WebView" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kbA-S3-gjL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ah-GC-TZ2">
+                                <rect key="frame" x="0.0" y="19" width="414" height="775"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleAspectFill" id="fa7-Sb-InP">
+                                        <rect key="frame" x="0.0" y="0.0" width="808" height="992"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RcK-Qo-jFq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RcK-Qo-jFq" firstAttribute="bottom" secondItem="9ah-GC-TZ2" secondAttribute="bottom" constant="19" id="2ch-AI-ebK"/>
+                            <constraint firstItem="9ah-GC-TZ2" firstAttribute="leading" secondItem="RcK-Qo-jFq" secondAttribute="leading" id="cXB-W0-WCW"/>
+                            <constraint firstItem="9ah-GC-TZ2" firstAttribute="centerY" secondItem="kbA-S3-gjL" secondAttribute="centerY" id="ptB-Fr-pRY"/>
+                            <constraint firstItem="9ah-GC-TZ2" firstAttribute="centerX" secondItem="kbA-S3-gjL" secondAttribute="centerX" id="v9v-oA-ObZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web" image="laptopcomputer" catalog="system" id="haN-6F-Ocm">
+                        <imageReference key="selectedImage" image="laptopcomputer" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="webView" destination="fa7-Sb-InP" id="PWA-xb-ijX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQY-B9-RHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.03703703703695" y="-640.55555555555554"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="x3z-9L-124">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xak-uW-wep" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="4la-Sp-mgP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="8my-cg-Z8I"/>
+                        <segue destination="dDg-bT-yYG" kind="relationship" relationship="viewControllers" id="L5r-2m-ASb"/>
+                        <segue destination="P28-vS-wKd" kind="relationship" relationship="viewControllers" id="3Su-aE-zjb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfw-N6-Elu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="88"/>
         </scene>
     </scenes>
     <resources>
+        <image name="laptopcomputer" catalog="system" width="128" height="73"/>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
+        <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

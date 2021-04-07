@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     
@@ -14,11 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var ss8: UILabel!
     @IBOutlet weak var ss16: UILabel!
     @IBOutlet weak var textEdit: UITextField!
+    
+    
     var num = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ss2.text = ""
+        ss8.text = ""
+        ss16.text = ""
     }
 
 

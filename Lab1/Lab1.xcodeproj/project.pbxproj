@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		683E7B7A261E56D2004AF4F2 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683E7B79261E56D2004AF4F2 /* WebView.swift */; };
+		683E7B7D261E6790004AF4F2 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683E7B7C261E6790004AF4F2 /* TableView.swift */; };
 		685607E9261DD25B001E9571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685607E8261DD25B001E9571 /* AppDelegate.swift */; };
 		685607EB261DD25B001E9571 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685607EA261DD25B001E9571 /* SceneDelegate.swift */; };
 		685607ED261DD25B001E9571 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685607EC261DD25B001E9571 /* ViewController.swift */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		683E7B79261E56D2004AF4F2 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		683E7B7C261E6790004AF4F2 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		685607E5261DD25B001E9571 /* Lab1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		685607E8261DD25B001E9571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		685607EA261DD25B001E9571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +61,9 @@
 				685607E8261DD25B001E9571 /* AppDelegate.swift */,
 				685607EA261DD25B001E9571 /* SceneDelegate.swift */,
 				685607EC261DD25B001E9571 /* ViewController.swift */,
+				683E7B79261E56D2004AF4F2 /* WebView.swift */,
 				685607EE261DD25B001E9571 /* Main.storyboard */,
+				683E7B7C261E6790004AF4F2 /* TableView.swift */,
 				685607F1261DD265001E9571 /* Assets.xcassets */,
 				685607F6261DD265001E9571 /* Info.plist */,
 			);
@@ -134,6 +140,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				685607ED261DD25B001E9571 /* ViewController.swift in Sources */,
+				683E7B7D261E6790004AF4F2 /* TableView.swift in Sources */,
+				683E7B7A261E56D2004AF4F2 /* WebView.swift in Sources */,
 				685607E9261DD25B001E9571 /* AppDelegate.swift in Sources */,
 				685607EB261DD25B001E9571 /* SceneDelegate.swift in Sources */,
 			);
